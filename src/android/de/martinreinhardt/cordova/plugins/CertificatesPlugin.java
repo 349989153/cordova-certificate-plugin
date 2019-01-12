@@ -29,6 +29,8 @@ package de.martinreinhardt.cordova.plugins;
 
 import org.apache.cordova.engine.SystemWebViewEngine;
 import org.apache.cordova.engine.SystemWebView;
+import org.crosswalk.engin.XWalkCordovaView;
+import org.crosswalk.engin.XWalkWebViewEngine;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaActivity;
 import org.apache.cordova.CordovaPlugin;
@@ -90,9 +92,9 @@ public class CertificatesPlugin extends CordovaPlugin {
                         public void run() {
                               try {
                                 CordovaActivity ca = (CordovaActivity) cordova.getActivity();
-                                SystemWebView view = (SystemWebView)webView.getView();
+                                XWalkCordovaView view = (XWalkCordovaView)webView.getView();
                                 CertificatesCordovaWebViewClient cWebClient =
-                                    new CertificatesCordovaWebViewClient((SystemWebViewEngine)webView.getEngine());
+                                    new CertificatesCordovaWebViewClient((XWalkWebViewEngine)webView.getEngine());
 
                                 cWebClient.setAllowUntrusted(allowUntrusted);
                                 webView.clearCache();

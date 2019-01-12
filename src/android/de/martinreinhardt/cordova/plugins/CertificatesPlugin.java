@@ -27,10 +27,8 @@
  */
 package de.martinreinhardt.cordova.plugins;
 
-import org.apache.cordova.engine.SystemWebViewEngine;
-import org.apache.cordova.engine.SystemWebView;
-import org.crosswalk.engin.XWalkCordovaView;
-import org.crosswalk.engin.XWalkWebViewEngine;
+import org.crosswalk.engine.XWalkCordovaView;
+import org.crosswalk.engine.XWalkWebViewEngine;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaActivity;
 import org.apache.cordova.CordovaPlugin;
